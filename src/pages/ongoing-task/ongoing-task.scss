@@ -1,0 +1,83 @@
+page-ongoing-task {
+  .logout {
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  .enterTaskDetail {
+    font-size: 16px;
+  }
+  .taskNameLabel {
+    font-size: 16px;
+    width: 40%;
+  }
+  .taskDescriptionLabel {
+     font-size: 16px;
+     width: 40%;
+  }
+  .taskDeadlineLabel {
+    font-size: 16px;
+    width: 20%;
+  }
+  .inputTask {
+    margin-bottom: 5px;
+    padding: 5px;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    border: 1px solid gray;
+  }
+  .inputTaskArea {
+    margin-bottom: 5px;
+      width: 100%;
+      border: 1px solid gray;
+  }
+      
+  .addTaskButton {
+    margin-top: 10px;
+  }
+  .ongoingTaskText {
+    font-size: 20px;
+  }
+  .taskList {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .taskItem {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .taskCard {
+    //margin: 10px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    }
+  .cardHeaderTaskName {
+    //width: 80%;
+    display: inline;
+  }
+  .cardHeaderTaskCreated {
+    width: 20%;
+    display: inline;
+  }
+  .deadlineCard {
+    align-content: center;
+    padding-left: 10px;
+  }
+  .taskDescription {
+    overflow: hidden;
+  }
+  .completeButtonRow {
+    padding: 0px;
+  }
+  .completeButtonCol {
+    padding: 0px;
+  }
+  .completeButton {
+    width: 101%;
+  }
+}

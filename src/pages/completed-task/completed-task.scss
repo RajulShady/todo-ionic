@@ -1,0 +1,37 @@
+page-completed-task {
+  .taskList {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .taskItem {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .taskCard {
+    //margin: 10px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid;
+    border-color: #b4b4b4;
+    //box-shadow: 2px 10px;     
+  }
+  .cardHeaderTaskName {
+    //width: 80%;
+    display: inline;
+  }
+  .cardHeaderTaskCreated {
+    width: 20%;
+      display: inline;
+  }
+  .deadlineCard {
+    align-content: center;
+    padding-left: 10px;
+   }
+  .taskDescription {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Task Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-card>
+    <ion-card-header>
+      <h2>Title: {{task.name}}</h2>
+      <hr/>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>{{task.description}}</h3>
+      <hr/>
+      </ion-card-content>
+      <ion-row class="cardfooterRow">
+          <ion-col class="cardfooterCol">
+            <p class="deadlineCard">Created: {{task.createdAt}}</p>
+            <p class="deadlineCard">Deadline: {{task.deadline}} </p>
+          </ion-col>
+        </ion-row> 
+    </ion-card>
+</ion-content>

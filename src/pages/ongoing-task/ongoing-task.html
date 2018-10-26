@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Todo App</ion-title>
+    <ion-buttons end> <button class ="logout" (click)="logout()"> Logout </button> </ion-buttons> 
+  </ion-navbar>
+  <!-- <button ion-button end>hey</button> -->
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class ="taskName">
+   <label class="enterTaskDetail">Enter Name and Description: </label>
+   <hr/>
+    <input full type="text" [(ngModel)]="newTask.name" placeholder="Name of task" class="inputTask">
+  </div>
+  <div class="taskDescription">
+    <!-- <label class="taskDescriptionLabel">Description: </label> -->
+    <ion-textarea type="text" [(ngModel)]="newTask.description" placeholder="Description of task" class="inputTaskArea"></ion-textarea>
+  </div>
+  <div class="taskDeadline">
+    <hr/>
+    <label class="taskDeadlineLabel">Set Deadline for task: </label>
+    <hr/>
+    <input type="date" [(ngModel)]="newTask.deadline" class="inputTask">
+    <button ion-button full (click)="addTask(newTask)" class="addTaskButton">Add New Task</button>
+    <hr/>
+  </div>
+  <p class="ongoingTaskText">Ongoing Tasks</p>
+  <hr/>
+  <div class="taskList">
+    <ion-list class="taskList">
+      <ion-item *ngFor="let task of tasks" class="taskItem">
+        <ion-card class="taskCard">
+          <ion-card-header  (click)="openTask(task.name, task.description)">
+            <h3>Title: {{task.name}}</h3>
+          </ion-card-header>
+          <ion-card-content class="taskDescription"  (click)="openTask(task.name, task.description)">
+            <h4>Description: {{task.description}}</h4>
+          </ion-card-content>
+          <ion-row class="cardfooter"  (click)="openTask(task.name, task.description)">
+            <ion-col>
+              <p class="deadlineCard">Created: {{task.createdAt}}</p>
+              <p class="deadlineCard">Deadline: {{task.deadline}} </p>
+            </ion-col>
+          </ion-row>    
+            <ion-row class="completeBUttonRow">
+              <ion-col class="completeButtonCol">              
+                <button ion-button (click)="updateTask(task.name, task.description)"  full class="completeButton">Completed</button>
+              </ion-col>               
+            </ion-row>  
+        </ion-card>   
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

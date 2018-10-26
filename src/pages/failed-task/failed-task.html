@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Failed Task</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div class="taskList">
+        <ion-list class="taskList">
+          <ion-item *ngFor="let task of failedTasks" class="taskItem">
+            <ion-card class="taskCard">
+              <ion-card-header  (click)="openTask(task.name, task.description)">
+                <h2>Title: {{task.name}}</h2>
+              </ion-card-header>
+              <ion-card-content class="taskDescription"  (click)="openTask(task.name, task.description)">
+                <h3>Description: {{task.description}}</h3>
+              </ion-card-content>
+              <ion-row class="cardfooter"  (click)="openTask(task.name, task.description)">
+                <ion-col>
+                  <p class="deadlineCard">Created: {{task.createdAt}}</p>
+                  <p class="deadlineCard">Deadline: {{task.deadline}} </p>
+                </ion-col>
+              </ion-row> 
+            </ion-card>   
+          </ion-item>
+        </ion-list>
+      </div>
+</ion-content>
